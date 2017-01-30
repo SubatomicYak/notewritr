@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <link href="css/notewritr.css" rel="stylesheet" type="text/css"/>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <script src="js/notewritr.js"></script>
+    <!-- bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <nav id="header" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">NOTEWRITR
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a id="new" href="#" onclick="fileNew();return false;">New</a></li>
+              <li><a id="open" href="#" onclick="fileOpen();return false;">Open</a></li>
+              <li><a id="saveAs" href="#" onclick="fileSaveAs();return false;">Save As</a></li>
+              <li id="liSave" class="disabled"><a id="save" href="#" onclick="fileSave();return false;">Save</a></li>
+              <li class="divider"></li>
+              <li><a id="exit" href="#" onclick="btnClose();return false;">Quit</a></li>
+            </ul>
+          </li>
+          <p id="fileName" class="navbar-text"></p>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <button class="btn btn-link navbar-btn" onclick="btnClose()">X</button>
+        </ul>
+      </div>
+    </nav>
+    <div id="textzone">
+      <textarea id="text_area" oninput="documentChange()"
+        placeholder="Welcome to NOTEWRITER! Running on Electron, and made pretty with Bootstrap! Get writing!"></textarea>
+    </div>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+  <script>window.$ = window.jQuery = require('jquery');</script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</html>

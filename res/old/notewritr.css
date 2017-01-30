@@ -1,0 +1,67 @@
+html{
+    background-color: gray; 
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#header{
+    -webkit-app-region: drag;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    height: 40px;
+}
+
+.header_button{
+    background-color: gray;
+    border: none;
+    color: white;
+    height: 40px; 
+    text-align: center;
+    display: inline-block;
+}
+
+.header_button:hover {
+    background-color: black;
+    color: white;
+}
+
+#file_menu{
+    position: fixed;
+    z-index: 999;
+    width: 120px;
+    top: 40px;
+    left: 5px;
+    background-color: cyan;
+    display: none; 
+}
+
+#textfield{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin-top: 40px;
+    background-color: cyan;
+}
+
+textarea{
+    outline: none;
+    resize: none;
+    overflow: auto;
+}
+
+#text_area{
+    width: 100%;
+    height: 100vh;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button{
+    -webkit-app-region: no-drag;
+}

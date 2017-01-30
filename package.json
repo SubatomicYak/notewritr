@@ -1,0 +1,11 @@
+{
+  "name"    : "notewritr",
+  "version" : "0.1.0",
+  "main"    : "main.js",
+  "description": "Write Notes with notewritr!",
+  "scripts": {
+    "start": "electron ."
+  },
+  "license": "CC0-1.0",
+  "repository": "nope"
+}

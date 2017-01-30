@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <link href="css/notewritr.css" rel="stylesheet" type="text/css"/>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <script src="js/notewritr.js"></script>
+    <!-- bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <div id="header">
+      <button id="btn_main" class="header_button" onclick="file_menu()">NOTEWRITR</button>
+       <label id="status"></label>
+      <button id="btn_close" class="header_button" onclick="win_close()">X</button>
+      <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+    </div>
+
+    <div id="file_menu">
+      <table>
+        <tr>
+          <td>
+            <button id="btn_open" onclick="file_open()">Open</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="btn_save" onclick="save()">Save</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="textfield">
+      <textarea id="text_area" placeholder="Welcome to NOTEWRITR! Get writing!" autofocus></textarea>
+    </div>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+  <script>window.$ = window.jQuery = require('jquery');</script>
+</html>
