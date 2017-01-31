@@ -6,6 +6,7 @@ var documentChanged = false;
 var fileNamed = false;
 var path;
 
+
 function save(){
     document.getElementById('status').innerHTML = 'saved!';
 }
@@ -61,8 +62,8 @@ function fileSaveAs(){
     }, function (fileName) {
         if (fileName === undefined) return;
         console.log(fileName);
-        $("#fileName").text() = fileName;
-        fs.writeFile(fileName, contents, function (err) {   
+        $("#fileName").val(fileName);
+        fs.writeFile(String(fileName), contents, function (err) {   
         });
     });
     documentChanged = false;
@@ -73,8 +74,10 @@ function fileSaveAs(){
 function fileSave(){
     const fs = require('fs');
     var contents = document.getElementById("text_area").value;
-    fs.writeFile(path, contents, function (err) {   
+    fs.writeFile(String(path), contents, function (err) {   
         });
+    documentChanged = false;
+    $("#liSave").addClass("disabled");
 }
 
 function confirmSave(){
